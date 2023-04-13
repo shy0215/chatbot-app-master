@@ -11,7 +11,7 @@ function Chatbot() {
 
     useEffect(() => {
 
-        eventQuery('welcomeToMyWebsite')
+        eventQuery('IntroduceMyWebsite')
 
     }, [])
 
@@ -133,7 +133,7 @@ function Chatbot() {
             return <Message key={i} who={message.who} text={message.content.text.text} />
         } else if (message.content && message.content.payload.fields.card) {
 
-            const AvatarSrc = message.who === 'bot' ? <Icon type="robot" /> : <Icon type="smile" />
+            const AvatarSrc = message.who === 'bot' ? <img src={'bot_avatar.png'} alt='bot_avatar' style={{width: '32px', height: '32px'}} /> : <Icon type="smile" />
             return <div>
                 <List.Item style={{ padding: '1rem' }}>
                     <List.Item.Meta

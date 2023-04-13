@@ -3,7 +3,7 @@ import { List, Icon, Avatar } from 'antd';
 
 function Message(props) {
 
-    const AvatarSrc = props.who ==='bot' ? <Icon type="robot" /> : <Icon type="smile" />  
+    const AvatarSrc = props.who === 'bot' ? <img src={'bot_avatar.png'} alt='bot_avatar' style={{width: '32px', height: '32px'}} /> : <Icon type="smile" />
 
     return (
         <List.Item style={{ padding: '1rem' }}>
