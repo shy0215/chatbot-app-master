@@ -133,7 +133,7 @@ function Chatbot() {
             return <Message key={i} who={message.who} text={message.content.text.text} />
         } else if (message.content && message.content.payload.fields.card) {
 
-            const AvatarSrc = message.who === 'bot' ? <img src={'bot_avatar.png'} alt='bot_avatar' style={{width: '32px', height: '32px'}} /> : <Icon type="smile" />
+            const AvatarSrc = message.who === 'bot' ? <img src={'bot_avatar.png'} alt='bot_avatar' style={{width: '32px', height: '32px'}} /> : <img src={'user_avatar.png'} alt='user_avatar' style={{width: '32px', height: '32px'}} />
             return <div>
                 <List.Item style={{ padding: '1rem' }}>
                     <List.Item.Meta
@@ -163,10 +163,10 @@ function Chatbot() {
 
     return (
         <div style={{
-            height: 700, width: 700,
+            height: 600, width: 700,
             border: '3px solid black', borderRadius: '7px'
         }}>
-            <div style={{ height: 644, width: '100%', overflow: 'auto' }}>
+            <div style={{ height: 544, width: '100%', overflow: 'auto' }}>
 
 
                 {renderMessage(messagesFromRedux)}
